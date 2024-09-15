@@ -6,7 +6,11 @@ public class PlayerRotation : MonoBehaviour
 {
     public Transform head;
     
-    // Update is called once per frame
+    void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
     void Update()
     {
         transform.Rotate(new Vector3(0, Input.GetAxis("Mouse X"), 0));
