@@ -10,11 +10,14 @@ public class FireballLauncher : MonoBehaviour
 
     public Transform head;
 
+    public CooldownTimer fireballCooldown;
+
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && fireballCooldown.IsAble())
         {
+            fireballCooldown.Activate();
             GameObject instance = Instantiate(fireball);
             PlayerProjectile projectile = instance.GetComponent<PlayerProjectile>();
             Assert.IsNotNull(projectile);
