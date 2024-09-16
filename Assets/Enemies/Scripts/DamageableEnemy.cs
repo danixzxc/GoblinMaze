@@ -8,6 +8,12 @@ public class DamageableEnemy : MonoBehaviour
     public UnityEvent onDamage;
     public void RecieveDamage()
     {
+        Debug.Log("HELP");
         onDamage?.Invoke();
+    }
+
+    public void Die()
+    {
+        Destroy(gameObject);
     }
 }

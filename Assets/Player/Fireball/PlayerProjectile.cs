@@ -28,7 +28,7 @@ public class PlayerProjectile : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        DamageableEnemy enemy = collision.gameObject.GetComponent<DamageableEnemy>();
+        DamageableEnemy enemy = collision.collider.gameObject.GetComponent<DamageableEnemy>();
         if (enemy != null)
         {
             enemy.RecieveDamage();
