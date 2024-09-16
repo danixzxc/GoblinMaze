@@ -12,6 +12,11 @@ GameObject:
   - component: {fileID: 8725252938934547312}
   - component: {fileID: 1772394785587431082}
   - component: {fileID: 8608286223365968091}
+  - component: {fileID: 5742498730063563239}
+  - component: {fileID: 392317321817927360}
+  - component: {fileID: 3339332109904084731}
+  - component: {fileID: 5639987385169746219}
+  - component: {fileID: 6239962865724672873}
   m_Layer: 0
   m_Name: PatrolEnemy
   m_TagString: Untagged
@@ -96,6 +101,125 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 6.03
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5742498730063563239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6062487367788968099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60e9423fca2bf0e4899c7c079be342b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDistance: 2
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  cooldown: {fileID: 0}
+  playerAttacked:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &392317321817927360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6062487367788968099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ac722a2963a7194f8afbebb2d0f90f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waitTime: 5
+  timeLeft: 0
+  paused: 0
+  onAble:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &3339332109904084731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6062487367788968099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 428dacf9888922047b152464c3a4bdcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onDamage:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5639987385169746219}
+        m_TargetAssemblyTypeName: HealthComponent, Assembly-CSharp
+        m_MethodName: RecieveDamage
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &5639987385169746219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6062487367788968099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ea4bdaab23a1e5449b5bd1b3aa3f671, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHP: 8
+  healthChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  healthEnded:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3339332109904084731}
+        m_TargetAssemblyTypeName: DamageableEnemy, Assembly-CSharp
+        m_MethodName: Die
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!136 &6239962865724672873
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6062487367788968099}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.68, z: 0}
 --- !u!1 &8837591330324554581
 GameObject:
   m_ObjectHideFlags: 0
@@ -105,7 +229,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 797998976675597990}
-  - component: {fileID: 3880509735704918031}
   m_Layer: 0
   m_Name: CapsuleCollider
   m_TagString: Untagged
@@ -128,29 +251,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7801526035160459220}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &3880509735704918031
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8837591330324554581}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &8013272754052775181
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -109,9 +109,10 @@ GameObject:
   - component: {fileID: 4542208855313497153}
   - component: {fileID: 7778107616265029434}
   - component: {fileID: 6424213246745968797}
+  - component: {fileID: 4734978954795221240}
   m_Layer: 6
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -280,6 +281,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onPickupKey:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &4734978954795221240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4416078429663266868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ea4bdaab23a1e5449b5bd1b3aa3f671, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  healthEnded:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &8304697121664400984

@@ -5,6 +5,7 @@ using UnityEngine.Events;
 
 public class HealthComponent : MonoBehaviour
 {
+    public int startingHP = 5;
     public UnityEvent<int> healthChanged;
     public UnityEvent healthEnded;
 
@@ -22,5 +23,15 @@ public class HealthComponent : MonoBehaviour
             }
             healthChanged.Invoke(_health);
         }
+    }
+
+    public void Start()
+    {
+        health = startingHP;
+    }
+
+    public void RecieveDamage(int amount)
+    {
+        health -= amount;
     }
 }
