@@ -9,6 +9,7 @@ public class ItemPicker : MonoBehaviour
     [SerializeField]
     private List<Image> _images;
     private int _itemIndex = 0;
+    public int keyAmount = 0;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -21,6 +22,7 @@ public class ItemPicker : MonoBehaviour
                 _images[_itemIndex].color = new Color(_images[_itemIndex].color.r,
                     _images[_itemIndex].color.g, _images[_itemIndex].color.b, 1f);
                 _itemIndex++;
+                keyAmount++;
             }
             pickUp.PickUpInvoke();
         }
