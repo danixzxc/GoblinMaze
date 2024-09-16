@@ -116,8 +116,8 @@ MonoBehaviour:
   attackDistance: 2
   layerMask:
     serializedVersion: 2
-    m_Bits: 0
-  cooldown: {fileID: 0}
+    m_Bits: 64
+  cooldown: {fileID: 392317321817927360}
   playerAttacked:
     m_PersistentCalls:
       m_Calls: []
