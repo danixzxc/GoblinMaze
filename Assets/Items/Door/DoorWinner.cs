@@ -6,6 +6,8 @@ using UnityEngine.Events;
 public class DoorWinner : MonoBehaviour
 {
     public UnityEvent win;
+    [SerializeField]
+    private GameObject _winPanel;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -16,6 +18,7 @@ public class DoorWinner : MonoBehaviour
             {
                 win?.Invoke();
                 Debug.Log("YOU WON");
+                _winPanel.SetActive(true);
             }
         }
     }
