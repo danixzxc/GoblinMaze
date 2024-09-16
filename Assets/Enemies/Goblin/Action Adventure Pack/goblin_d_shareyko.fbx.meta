@@ -3,7 +3,17 @@ guid: 930a7298740979c4b93fbe7d3aede43a
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: eyes_eyes_lambert
+    second: {fileID: 2100000, guid: 667be10ae2b5e9742b305d43ca113829, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: phong1
+    second: {fileID: 2100000, guid: 667be10ae2b5e9742b305d43ca113829, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

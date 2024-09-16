@@ -11843,10 +11843,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PatrolEnemy
       objectReference: {fileID: 0}
-    - target: {fileID: 6062487367788968099, guid: 67011adbb7d79a345bab562cff0a2706, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7801526035160459220, guid: 67011adbb7d79a345bab562cff0a2706, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.9
@@ -11902,7 +11898,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2358509744295949317, guid: fd6bdc5816b3ea34f8352f49f851f4d9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.7
+      value: 0.97
       objectReference: {fileID: 0}
     - target: {fileID: 2358509744295949317, guid: fd6bdc5816b3ea34f8352f49f851f4d9, type: 3}
       propertyPath: m_LocalPosition.y
@@ -11910,7 +11906,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2358509744295949317, guid: fd6bdc5816b3ea34f8352f49f851f4d9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.97
       objectReference: {fileID: 0}
     - target: {fileID: 2358509744295949317, guid: fd6bdc5816b3ea34f8352f49f851f4d9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -11943,10 +11939,6 @@ PrefabInstance:
     - target: {fileID: 7218004196835389081, guid: fd6bdc5816b3ea34f8352f49f851f4d9, type: 3}
       propertyPath: m_Name
       value: RandomPatrolEnemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 7218004196835389081, guid: fd6bdc5816b3ea34f8352f49f851f4d9, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
